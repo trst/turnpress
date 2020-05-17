@@ -8,12 +8,18 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Redirecting...</title>
-  <meta http-equiv="refresh" content="0;<?php echo $redirect_url; ?>" />
+  <?php if (!empty($redirect_url)) : ?>
+    <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="0;<?php echo $redirect_url; ?>" />
+  <?php endif; ?>
 </head>
+
 <body>
-  Redirecting... 
+  <?php if (!empty($redirect_url)) : ?>
+    Redirecting... 
+  <?php endif; ?>
 </body>
 </html>
